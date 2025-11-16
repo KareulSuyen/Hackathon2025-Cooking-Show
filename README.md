@@ -23,7 +23,7 @@ Includes **AI-powered Quizzes**, **Email system**, and **JWT authentication** fo
 
 ---
 
-## Live site : <a href=https://bonengmalakas.site> Live site here </a>
+## Live site : <a href=https://bonengmalakas.site target=_blank> Live site here </a>
 
 
 ## Installation & Setup
