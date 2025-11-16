@@ -24,6 +24,7 @@ Includes **AI-powered Quizzes**, **Email system**, and **JWT authentication** fo
 ---
 
 ## Live site <a href='https://bonengmalakas.site'> Here </a>
+## Subdomain <a href='https://bonengmalakas.netlify.app> Here </a>
 
 ## Installation & Setup
 
