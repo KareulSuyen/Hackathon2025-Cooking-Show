@@ -5,7 +5,7 @@ Includes **AI-powered Quizzes**, **Email system**, and **JWT authentication** fo
 
 ---
 
-## 🚀 Features
+## Features
 -  **AI Assistant** – answers questions related to overpopulation  
 -  **Email Notifications** – integrated email system for alerts & updates  
 -  **JWT Authentication** – secure login/register system  
@@ -14,7 +14,7 @@ Includes **AI-powered Quizzes**, **Email system**, and **JWT authentication** fo
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** React, JavaScript, HTML, SCSS  
 - **Backend:** Django + Django REST Framework  
 - **Auth:** JWT (JSON Web Token)  
