@@ -31,5 +31,6 @@ Includes **AI-powered Quizzes**, **Email system**, and **JWT authentication** fo
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/KareulSuyen/Hackathon2025-Cooking-Show
-cd hkktn
+cd Hackathon2025-Cooking-Show
+
 
