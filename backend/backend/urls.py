@@ -1,5 +1,3 @@
-
-# PROJECT urls.py (backend/urls.py)
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import (
@@ -12,5 +10,5 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='user-token'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token-refresh'),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/', include('api.urls')),  # Keep only this one
+    path('api/', include('api.urls')),  
 ]
