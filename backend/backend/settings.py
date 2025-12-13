@@ -10,7 +10,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 GROQ_API_KEY = config('GROQ_API_KEY')
-AI_MODEL = config('AI_MODEL', default='deepseek-r1-distill-llama-70b') 
+AI_MODEL = config('AI_MODEL') 
 AI_API_BASE_URL = config('AI_API_BASE_URL', default='https://api.groq.com/openai/v1')  
 
 SECRET_KEY = config('DJANGO_SECRET_KEY')
