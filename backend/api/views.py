@@ -90,14 +90,7 @@ class AIAPIView(APIView):
     authentication_classes = []
 
     def post(self, request):
-        print("=== GROQ AUTH DEBUG ===")
-        
         api_key = getattr(settings, 'GROQ_API_KEY', None)
-        print(f"API Key exists: {bool(api_key)}")
-        print(f"API Key length: {len(api_key) if api_key else 0}")
-        print(f"API Key first 10 chars: {api_key[:10] if api_key else 'None'}...")
-        print(f"API Key starts with 'gsk_': {api_key.startswith('gsk_') if api_key else False}")
-        
         user_prompt = request.data.get('prompt', 'test')
         
         headers = {

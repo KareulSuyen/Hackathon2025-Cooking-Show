@@ -15,9 +15,6 @@
 # logger = logging.getLogger(__name__)
 
 # def fetch_world_population_data():
-#     """
-#     Fetch current world population data from Worldometer API
-#     """
 #     try:
 #         response = requests.get(
 #             "https://worldometers.p.rapidapi.com/api/world-population",
@@ -33,9 +30,6 @@
 #         return None
 
 # def fetch_country_population_data(country_code):
-#     """
-#     Fetch population data for a specific country
-#     """
 #     try:
 #         response = requests.get(
 #             f"https://worldometers.p.rapidapi.com/api/population/country/{country_code}",
@@ -51,9 +45,6 @@
 #         return None
 
 # def update_country_data():
-#     """
-#     Update all country data in database
-#     """
 #     try:
 #         response = requests.get(
 #             "https://worldometers.p.rapidapi.com/api/population/all-countries",
