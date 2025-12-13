@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 GROQ_API_KEY = config('GROQ_API_KEY')
 AI_MODEL = config('AI_MODEL') 
-AI_API_BASE_URL = config('AI_API_BASE_URL', default='https://api.groq.com/openai/v1')  
+AI_API_BASE_URL = config('AI_API_BASE_URL')  
 
 SECRET_KEY = config('DJANGO_SECRET_KEY')
 
