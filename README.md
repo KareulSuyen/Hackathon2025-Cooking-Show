@@ -26,6 +26,7 @@ Includes **AI-powered Quizzes**, **Email system**, and **JWT authentication** fo
 ## Live site <a href='https://bonengmalakas.site'> Here </a>
 ## Subdomain <a href='https://bonengmalakas.netlify.app'> Here </a>
 ## Site takes 1 stupid minute to run because of render cold start ( ｡ •̀ ᴖ •́ ｡)💢
+## This site database restarts after 15minutes(Valid accounts will also be deleted), so feel free to modify it
 ## Installation & Setup
 
 ### 1. Clone the repository
