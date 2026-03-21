@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { ACCESS_TOKEN } from './constants';
 
-
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
@@ -77,7 +76,6 @@ export const registerUser = async (userData) => {
   }
 };
 
-// User Login Function
 export const loginUser = async (credentials) => {
   try {
     console.log('Logging in user:', credentials.username || credentials.email);

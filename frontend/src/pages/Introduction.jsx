@@ -1,4 +1,3 @@
-{/* Static Intro page loloololol boneng boneng boneng boneng boneng boneng boneng boneng boneng */}
 import styles from '../styles/introduction.module.scss';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants';
 import city from '../../public/images/city.png'

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+import { SiDjango, SiReact, SiSass, SiCss3, SiJavascript, SiHtml5 } from "react-icons/si";
 import styles from '../styles/about.module.scss';
 import heheh from '../../public/images/heheh.jpg'
 
@@ -13,6 +14,15 @@ const AboutUs = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const techStack = [
+    { name: 'Django', icon: SiDjango, },
+    { name: 'React', icon: SiReact,},
+    { name: 'SCSS', icon: SiSass,},
+    { name: 'CSS', icon: SiCss3,},
+    { name: 'JavaScript', icon: SiJavascript,},
+    { name: 'HTML', icon: SiHtml5,}
+  ];
+
   return (
     <section className={styles.aboutSection}>
       <div className={styles.container}>
@@ -21,7 +31,7 @@ const AboutUs = () => {
           <br />
         </div>
         <div className={styles.aboutContent}>
-          <h2 className={styles.sectionTitle}>About Us</h2>
+          <h2 className={styles.sectionTitle}>Boneng Malakas</h2>
           <p className={styles.description}>
             We are a dedicated team of four researchers passionate about addressing one of the most 
             pressing global challenges of our time: overpopulation. Through extensive research and 
@@ -34,7 +44,6 @@ const AboutUs = () => {
         <hr />
         {/* Boneng's Employers */}
         <div className={styles.projectSection}>
-          <h3 className={styles.projectTitle}>Boneng Malakas</h3>
           <div className={styles.projectCard}>
             <div className={styles.projectInfo}>
               <h4 className={styles.projectName}>Over<span>Population</span></h4>
@@ -43,6 +52,22 @@ const AboutUs = () => {
                 and data analysis to provide innovative solutions for understanding and addressing 
                 overpopulation challenges through interactive visualizations and research tools.
               </p>
+              
+              <div className={styles.techStack}>
+                <h5 className={styles.techStackTitle}>Built with</h5>
+                <div className={styles.techGrid}>
+                  {techStack.map((tech, index) => {
+                    const IconComponent = tech.icon;
+                    return (
+                      <div key={index} className={styles.techItem}>
+                        <IconComponent className={styles.techIcon} style={{ color: tech.color }} />
+                        <span className={styles.techName}>{tech.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
               <div className={styles.projectLinks}>
                 <a 
                   href="https://github.com/greysuyen/hkktn" 

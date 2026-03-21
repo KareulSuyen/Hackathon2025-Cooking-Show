@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import helpstyle from '../styles/help.module.scss';
 import { FaEarthAsia } from "react-icons/fa6";
-import { FaPeopleCarry, FaRecycle, FaGlobeAsia, FaHospital, FaHandHoldingWater, FaPrayingHands } from "react-icons/fa";
+import { FaPeopleCarry, FaRecycle, FaGlobeAsia, FaHospital, FaHandHoldingWater, FaPrayingHands, FaBookOpen } from "react-icons/fa";
 import { FcStatistics } from "react-icons/fc";
 import { FaScaleUnbalanced } from "react-icons/fa6";
 import { ImEarth } from "react-icons/im";
@@ -11,12 +11,16 @@ import { TbGeometry, TbBulb } from "react-icons/tb";
 import { MdOutlineQueryStats } from "react-icons/md";
 import { GiPlantRoots, GiJourney, GiPineTree, GiThreeLeaves } from "react-icons/gi";
 import { BiSolidError } from "react-icons/bi";
-import { SiGoogleearthengine, SiCodemagic } from "react-icons/si";
+import { SiGoogleearthengine, SiCodemagic, SiAwssecretsmanager, SiUnitednations } from "react-icons/si";
 import { LuWeight } from "react-icons/lu";
-import { RiQuestionAnswerLine } from "react-icons/ri";
+import { RiQuestionAnswerLine, RiPlantLine } from "react-icons/ri";
 import { FcCancel } from "react-icons/fc";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { GoNorthStar } from "react-icons/go";
+import { BsBank } from "react-icons/bs";
+import { IoIosSearch } from "react-icons/io";
+import { TfiStatsUp } from "react-icons/tfi";
+
 
 
 const VisualCard = ({ image, title, description }) => {
@@ -451,10 +455,10 @@ const Help = () => {
                         
                         <div className={helpstyle.solutionsGrid}>
                             {[
-                                { icon: '📚', title: 'Edukasyon', color: 'blue', items: ['Komprehensibong sex education', 'Mga programa sa edukasyon ng mga babae', 'Mga kampanya para sa kamalayan'] },
-                                { icon: '🏥', title: 'Healthcare', color: 'red', items: ['Mga serbisyo sa family planning', 'Accessible na contraceptives', 'Mga programa sa maternal health'] },
-                                { icon: '🌱', title: 'Sustainability', color: 'green', items: ['Paggamit ng renewable energy', 'Sustainable na agriculture', 'Green urban planning'] },
-                                { icon: '🏛️', title: 'Patakaran', color: 'purple', items: ['Mga population policies', 'Resource management', 'Mga plano sa urban development'] }
+                                { icon: <FaBookOpen  size={35} />, title: 'Edukasyon', color: 'blue', items: ['Komprehensibong sex education', 'Mga programa sa edukasyon ng mga babae', 'Mga kampanya para sa kamalayan'] },
+                                { icon: <FaHospital  size={35} />, title: 'Healthcare', color: 'red', items: ['Mga serbisyo sa family planning', 'Accessible na contraceptives', 'Mga programa sa maternal health'] },
+                                { icon: <RiPlantLine size={35}/>, title: 'Sustainability', color: 'green', items: ['Paggamit ng renewable energy', 'Sustainable na agriculture', 'Green urban planning'] },
+                                { icon: <SiAwssecretsmanager size={35}/>, title: 'Patakaran', color: 'purple', items: ['Mga population policies', 'Resource management', 'Mga plano sa urban development'] }
                             ].map((solution, index) => (
                                 <div 
                                     key={index} 
@@ -497,14 +501,38 @@ const Help = () => {
                         
                         <div className={helpstyle.resourcesGrid}>
                             {[
-                                { title: 'United Nations Population Division', desc: 'Opisyal na statistics at projections', link: '#', icon: '🌐' },
-                                { title: 'World Bank Population Data', desc: 'Demographic at economic indicators', link: '#', icon: '📊' },
-                                { title: 'Population Reference Bureau', desc: 'Research at data analysis', link: '#', icon: '🔍' },
-                                { title: 'Our World in Data', desc: 'Interactive charts at visualizations', link: '#', icon: '📈' }
+                                { 
+                                    title: 'United Nations Population Division', 
+                                    desc: 'Opisyal na statistics at projections', 
+                                    link: 'https://www.un.org/development/desa/pd/', 
+                                    icon: <SiUnitednations size={30} />,
+                                },
+                                { 
+                                    title: 'Population Reference Bureau', 
+                                    desc: 'Research at data analysis', 
+                                    link: 'https://www.prb.org/what-we-do/', 
+                                    icon: <IoIosSearch size={30} />
+                                },
+                                { 
+                                    title: 'Our World in Data', 
+                                    desc: 'Interactive charts at visualizations', 
+                                    link: 'https://ourworldindata.org/world-population-growth', 
+                                    icon: <TfiStatsUp size={27} />
+                                },
+                                { 
+                                    title: 'World Bank Population Data', 
+                                    desc: 'Demographic at economic indicators', 
+                                    link: 'https://data.worldbank.org/indicator/SP.POP.TOTL', 
+                                    icon: <BsBank size={27} />
+                                },
                             ].map((resource, index) => (
-                                <div 
-                                    key={index} 
+                                <a 
+                                    key={index}
+                                    href={resource.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={helpstyle.resourceCard}
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
                                     onMouseEnter={(e) => {
                                         e.currentTarget.style.transform = 'translateY(-2px)';
                                         e.currentTarget.style.boxShadow = '0 8px 32px rgba(167,139,250,0.3)';
@@ -519,7 +547,7 @@ const Help = () => {
                                     <div className={helpstyle.resourceIcon}>{resource.icon}</div>
                                     <h4 className={helpstyle.resourceTitle}>{resource.title}</h4>
                                     <p className={helpstyle.resourceDescription}>{resource.desc}</p>
-                                </div>
+                                </a>
                             ))}
                         </div>
                     </div>

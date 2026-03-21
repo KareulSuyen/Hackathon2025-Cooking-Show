@@ -2,7 +2,7 @@
   base = "frontend/"
   command = "npm run build"
   publish = "dist/"
-
+  
 [build.environment]
   NODE_VERSION = "18"
 
@@ -10,3 +10,4 @@
   from = "/*"
   to = "/index.html"
   status = 200  
+
