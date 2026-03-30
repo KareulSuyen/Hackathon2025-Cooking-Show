@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
-
+import os
 
 @csrf_exempt
 @require_http_methods(["GET", "POST"])
@@ -39,12 +39,13 @@ class CreateUserViews(generics.CreateAPIView):
     permission_classes = [AllowAny]
     
     def create(self, request, *args, **kwargs):
-        print(f"=== REGISTRATION DEBUG ===")
-        print(f"Request method: {request.method}")
-        print(f"Content-Type: {request.content_type}")
-        print(f"Request body (raw): {request.body}")
-        print(f"Request data: {request.data}")
-        print(f"Request headers: {dict(request.headers)}")
+        if DEBUG:
+            print(f"=== REGISTRATION DEBUG ===")
+            print(f"Request method: {request.method}")
+            print(f"Content-Type: {request.content_type}")
+            print(f"Request body (raw): {request.body}")
+            print(f"Request data: {request.data}")
+            print(f"Request headers: {dict(request.headers)}")
         
         if not request.data:
             print("No data received!")
